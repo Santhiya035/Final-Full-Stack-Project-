@@ -1,0 +1,17 @@
+p{
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+  }
+  h1{
+    font-size: 20px;
+    color: rgb(69, 70, 15);
+    font-weight: bolder;
+  }
+  div{
+    width: 500px;
+    background-color: rgb(255, 87, 152);
+  }
+  table{
+    background-color: antiquewhite;
+  }

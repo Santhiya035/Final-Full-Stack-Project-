@@ -1,0 +1,71 @@
+<div class="list row">
+    <div class="col-mg-8">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search by Book"
+            [(ngModel)]="bookName"/>
+            <div class="input-group">
+                <button class="btn btn-outline-secondary" type="button" (click)="searchByName()">
+                    Search
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      view list of records
+    </button>
+    <ul class="dropdown-menu">
+        <li><button (click)="fetchTechnicalBooks()" class="dropdown-item" type="button">Technical</button></li>
+        <li><button (click)="fetchFanstacyBooks()" class="dropdown-item" type="button">Fantacy</button></li>
+        <li><button (click)="fetchInspirationalBooks()"class="dropdown-item" type="button">Inspiration</button></li>
+        <li><button (click)="fetchComdeyBooks()"class="dropdown-item" type="button">Comedy</button></li>
+        <li><button (click)="fetchMysteryBooks()"class="dropdown-item" type="button">Mystery</button></li>
+  
+      </ul>
+    </div>
+
+<h2> Book List</h2>
+<table class = "table table-bordered table-secondary">
+    <thead>
+        <tr style=" color:rgb(250, 0, 0);
+        font-size: 28px;">
+            <th> Book Name </th>
+            <th> Author Name </th>
+            <th> Journal </th>
+            <th> Journal Id </th>
+            <th> Edition </th>
+            <th> No Of Copies </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let book of books"  style="font-weight: bold; font-size: 20px; -webkit-text-fill-color: rgb(8, 1, 14);">
+            <td> {{ book.bookName }} </td>
+            <td> {{ book.authorName }} </td>
+            <td> {{ book.journal }} </td>
+            <td> {{ book.journalId }} </td>
+            <td> {{ book.edition }} </td>
+            <td> {{ book.noOfCopies }} </td>
+
+          
+
+            <td>
+                <button class="button" (click) = "updateBook(book.bookId)"> Update</button>
+                <button class="button" (click)= "confirmDelete(book)" style="margin-left: 10px"> Delete</button>
+                <button class="button" (click) = "bookDetails(book.bookId)" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+        <tr *ngIf="books.length!==0">
+            <button class="m-3 btn btn-sm btn-danger" (click)="confirmRemoveAll()">
+                Remove All
+            </button>
+        </tr>
+        <tr scope="row" *ngIf="books.length==0">
+            <td colspan="4" class="text-centre">No Records Found</td>
+        </tr>
+    </tbody>
+</table>
+
+

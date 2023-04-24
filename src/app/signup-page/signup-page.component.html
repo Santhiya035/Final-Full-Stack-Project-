@@ -1,0 +1,31 @@
+
+<body>
+<form>
+<div class="formContainer">
+<body>
+<form class="/action_page.php" method="get">
+<div>
+<h1>Sign Up</h1>
+<hr>
+<table>
+<tr><td><label for="email"><b>Email</b></label>
+<input type="text" placeholder="Enter Email" id="email" [(ngModel)]="email" name="email" required></td></tr>
+<tr><td><label for="password"><b>Password</b></label>
+<input type="password" placeholder="Enter Password" [(ngModel)]="password" name="password" required></td></tr>
+<tr><td><label for="repeatPassword"><b>Repeat Password</b></label>
+<input type="password" placeholder="Repeat Password" [(ngModel)]="password" name="repeatPassword"
+required></td></tr>
+</table>
+</div>
+<label>
+<input type="checkbox" checked="checked" name="remember" style="bottom:25px"> Remember me
+</label>
+<p>If already have an account<a href="/login-page"
+style="color:rgba(17, 6, 179, 0.952)">Click here to signIn</a>.</p>
+<div>
+<button type="button" class="cancel">Cancel</button>
+<button type="submit" (click)="confirmRegister()" class="signup">SignUp</button>
+<!--<p>If already have an account Click to Sign-in</a>.</p>-->
+</div>
+</form>
+</body>

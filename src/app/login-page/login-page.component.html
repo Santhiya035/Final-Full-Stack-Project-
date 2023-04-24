@@ -1,0 +1,22 @@
+<body>
+    <table>
+    <thead>
+        <tr>
+            <th colspan="2">Sign-in</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>UserName </td><td><input type="text" name="username" title="username" placeholder="Enter you User Name" id="username" [(ngModel)]="username"></td></tr>
+         <tr><td> Password </td><td><input type="password" name="password" title="password" placeholder="Enter the Password" id="password" [(ngModel)]="password"></td><tr>
+    </tbody>
+    <tfoot>
+        <tr><td><p style="color: black;">donot have an account?<a href="/signup-page"
+                style="color:rgba(17, 6, 179, 0.952)"> Click here to Register</a>.</p></td>
+            <td><button type="submit" id="Signin" (click)=checkLogin()>Submit</button></td>
+                </tr>
+    </tfoot>
+    <p id="e" style="color: rgba(255, 38, 0, 0.849);font-size: 20px;"><b>{{emessage}}</b></p>   
+    </table>
+    </body>
+
+   

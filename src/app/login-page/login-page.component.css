@@ -1,0 +1,36 @@
+body{
+    font-family: 'Segoe UI';/* Tahoma, Geneva, Verdana, sans-serif;*/
+    width: 40%;
+    font-size: 30px;
+    border-style: none;
+    color: hsl(332, 95%, 37%);
+    /*background-color: #7fceb0;*/
+    border-radius: 25px;
+    padding: 25px;
+    }
+    button[type="submit"]{
+        background-color: #e40273c7;
+        font-size: 25px;
+        color:beige;
+        border: none;
+        border-radius: 12px;
+        width: 120px;
+    }
+    input[type=text], input[type=password]{
+        background-color: rgba(47, 174, 206, 0.986);
+        border-radius: 12px;
+        width: 150px;
+        border: none;
+        margin: 3px 0 5px 0;
+        padding: 1%;
+        display: block; 
+    }
+    input[type=text]:focus, input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+        font-size: 20px;
+
+    }
+    p{
+        font-size: 15px;
+    }

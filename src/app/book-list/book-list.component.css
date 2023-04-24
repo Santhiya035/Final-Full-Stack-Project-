@@ -1,0 +1,35 @@
+th{
+    font-size: 23px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+td{
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.button {
+display: inline-block;
+padding: 5px 10px;
+font-size: 20px;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+outline: none;
+color: #fff;
+background-color: #077780a6;
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px #918b8b;
+}
+.button:hover {background-color: #0b8369}
+
+.button:active {
+background-color: #13d4cbec;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
+p{
+align-self: self-end;
+}
+h2{
+color: #ca0641;
+}
